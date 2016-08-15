@@ -8,6 +8,7 @@
         <h1>网站一级标题</h1>
         <ul>
             <li>
+                <!-- a 到 href 之间距离为一个空格 -->
                 <a  href="http://www.baidu.com" title = "百度" >导航链接一</a> 
             </li>
             <li>
@@ -23,6 +24,9 @@
         
         <h2>文章一级标题</h2> <br/>
         <h3>文章二级标题</h3>
+            <!-- 文章作者和文章发表时间不应该放在 p 标签中。 -->
+            <!-- p 标签的语义化是 paragraph，即段落，显然不适合文章作者和文章发表时间的场景。-->
+            <!-- 以下每个段落都可以单独放在一对 <p></p> 中，这样就可以避免使用 <br> -->
             <p>文章作者&nbsp;文章发表时间<br/>
             这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落,换行了<br/>
             这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落,换行了<br/>   
@@ -30,6 +34,7 @@
             <a  href="http://ife.baidu.com" title = "百度前端技术学院">这里有一个链接到http://ife.baidu.com </a>
             这是一个很长的段落，这是一个很长的段落，这里有个<strong>粗体字</strong>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落。<br/>
             <br/>
+            <!-- img 缩进不正确，多一个空格 -->
              <img src="http://img.mukewang.com/52da54ed0001ecfa04120172.jpg"title="小李子">
             <br/>
             
@@ -39,6 +44,7 @@
         
         <h2>另一篇文章一级标题</h2> <br/>
         <h3>文章二级标题</h3> <br/>
+        <!-- 以下 p 标签缩进不正确，多一个空格 -->
          <p>文章作者&nbsp;文章发表时间<br/>
             这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落,换行了<br/>
             这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落,换行了<br/>
@@ -48,6 +54,7 @@
              <img src="http://img.mukewang.com/52da54ed0001ecfa04120172.jpg"title="小李子">
             <br/>
             <ul>
+                <!-- 这里不用跨越三行，直接 <li>项目列表一</li> 即可 -->
                 <li>
                     项目列表一
                 </li>
@@ -60,6 +67,8 @@
             </ul>
             <br/>
             <h2>图片</h2>
+            <!-- 以下内容可以更紧凑些，第二个 br 应该是不必要的 -->
+            <!-- <p>好看的图片<br><img src="" alt=""></p> -->
             <p>
                 好看的图片
             <br/>
@@ -120,6 +129,7 @@
              <img src="http://img.mukewang.com/52da54ed0001ecfa04120172.jpg"title="小李子">
             <br/>
             </p>
+            <!-- 整个 HTML 文档中的标题缩进应该统一，即二级标题的缩进应该一致。 -->
         <h2>最后一篇文章一级标题</h2>
         <h3>文章二级标题</h3>
             <p>文章作者&nbsp;文章发表时间<br/>
@@ -135,6 +145,7 @@
                     </li>
                 </ol>
                 下面是一个表格，给表格加了一个border=“1”好让你看出来这是一个表格
+                <!-- 如果要通过 <style></style> 标签添加样式，最好放在 <head></head> 中，否则采用内联样式，即 style="" 形式 -->
                 <style type="text/css">
                 table tr td,th{border:1px solid #000;}
                 </style>
@@ -145,7 +156,7 @@
                     <th>表头</th>
                     <th>表头</th>
                    </tr>
-
+                    <!-- tr 之间不需要间隔一行 -->
                    <tr>
                     <td>表内容单元格</td>
                     <td>表内容单元格</td>
@@ -180,11 +191,21 @@
             
             <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
             <h2>侧栏注册窗口标题</h2>
+            <!-- form 中的内容应该缩进，显得有层次感，可以一目了然。 -->
+            <!-- 
+            <form action="">
+                <input type="text">
+                <label for=""></label>
+            </form> 
+            -->
             <form method = "POST" action="save.php"> 
             <label for = "email"> 请输入邮箱地址：</label>
+            <input type="email">
+            <!-- 邮箱地址的 type 不是 test，而是 email -->
             <input type = "test" name = "email" id = "email" value="这是一个文本输入框"><br/>
             邮箱地址请按要求格式输入<br/>
             <label for="pass">输入密码:</label>
+            <!-- type 不是 test，而是 password -->
             <input type="test"  name="pass" id="pass" value="这是一个文本输入框"/>
             <label for="repass">请重复输入密码:</label>
             <input type="test"  name="repass" id="repass" value="这是一个文本输入框"/><br/>
@@ -202,6 +223,8 @@
             <option value="成都">成都</option>
             </select>
             <label>爱好:</label>
+            <!-- 以下用一个空格来分割 -->
+            <!-- <input type="checkbox" value="sports" name="sports"> -->
             <input type="checkbox" value="sports"  name="sport" />
             <label>运动</label>
             <input type="checkbox" value="arts"  name="arts" />
