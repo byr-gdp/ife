@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>mission3</title>
+  <style>
+  #biggest{
+    margin: 0 auto;
+    /*padding: 20px;*/
+    background: #eee;
+    border: 1px solid #999;
+    min-width: 600px;
+    overflow: auto;
+  }
+
+  #tlogoname{
+      float: left;
+      padding: 20px;
+      width: 200px;
+      background: #fff;
+      border: 1px solid #999;
+  }
+
+  #tname{
+      font-size: 13px;
+      font-weight: bold;
+  }
+  #plogoname{
+      width: 120px;
+      float: right;
+      background: #fff;
+      border: 1px solid #999;
+  }
+  div img{
+      height:80px;
+      width: 80px;
+  }
+  /*重点在这里*/
+  /*凡是设置了 float 和 position: absolute 属性的元素都会脱离文档流，为了让右边那部分不在第二行，我们可以让中间部分也脱离文档流，即设置 position: absolute;*/
+  /*剩下的细节就得微调了。这里必须弄明白每句 CSS 语句的意义，有它和没它会发生什么变化心里得有数。*/
+  #introduction{
+      padding: 20px;
+      margin-left: 260px;
+      margin-right: 140px;
+      background: #fff;
+      border: 1px solid #999;
+      position: absolute; /*重点*/
+  }
+  .plogo{
+      background: #fff;
+      display: block;
+      margin: 20px;
+      border: 1px solid #999;
+  }
+  </style>
+</head>
+  <body>
+    <div id="biggest">
+      <div id="tlogoname">
+        <img src="http://img.mukewang.com/52da54ed0001ecfa04120172.jpg"title="小李子">
+        <span id="tname">团队名称</span>
+      </div>
+      <div id="introduction">
+        <p>
+        团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍。团队介绍  团队介绍。
+        </p>
+      </div>
+      <div id="plogoname">
+        <img class="plogo" src="http://img.mukewang.com/52da54ed0001ecfa04120172.jpg"title="小李子">
+        <img class="plogo" src="http://img.mukewang.com/52da54ed0001ecfa04120172.jpg"title="小李子">
+        <img class="plogo" src="http://img.mukewang.com/52da54ed0001ecfa04120172.jpg"title="小李子">
+        <img class="plogo" src="http://img.mukewang.com/52da54ed0001ecfa04120172.jpg"title="小李子">
+      </div>
+    </div>
+</body>
+</html>

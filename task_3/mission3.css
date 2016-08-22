@@ -1,0 +1,46 @@
+#biggest{
+	  margin: 0 auto;
+  	padding: 20px;
+  	background: #eee;
+  	border: 1px solid #999;
+  	min-width: 600px;
+    overflow: auto;
+	}
+
+#tlogoname{
+	  float: left;
+  	padding: 20px;
+  	width: 200px;
+	  background: #fff;
+	  border: 1px solid #999;
+}
+#tlogo{
+	  float: left;
+}
+#tname{
+  	font-size: 13px;
+	  font-weight: bold;
+}
+#plogoname{
+	  width: 120px;
+  	float: right;
+  	background: #fff;
+  	border: 1px solid #999;
+}
+div img{
+    height:80px;
+	  width: 80px;
+}
+#introduction{
+    padding: 20px;
+    margin-left: 260px;
+    margin-right: 140px;
+    background: #fff;
+    border: 1px solid #999;
+}
+.plogo{
+   	background: #fff;
+  	display: block;
+  	margin: 20px;
+  	border: 1px solid #999;
+}
